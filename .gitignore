@@ -24,3 +24,7 @@ wadm_client-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Dialyzer
+.wadm_client.plt
+.wadm_client.plt.hash
