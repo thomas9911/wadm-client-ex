@@ -6,7 +6,7 @@ defmodule WadmClient do
   alias WadmClient.Conn
 
   @type success :: {:ok, map}
-  @type error :: {:error, :timeout} | {:error, :no_responders}
+  @type error :: {:error, :timeout} | {:error, :no_responders} | {:error, map}
   @type result :: success | error
 
   @spec from_gnat(Gnat.t(), binary, binary | nil) :: Conn.t()
@@ -85,7 +85,10 @@ defmodule WadmClient do
   @spec parse_response({:ok, Gnat.message()} | {:error, :timeout} | {:error, :no_responders}) ::
           result
   defp parse_response({:ok, %{body: body}}) do
-    {:ok, Jason.decode!(body)}
+    case Jason.decode!(body) do
+      %{"result" => "error"} = error -> {:error, error}
+      data -> {:ok, data}
+    end
   end
 
   defp parse_response(other), do: other

@@ -31,6 +31,7 @@ defmodule WadmClient.MixProject do
     [
       {:gnat, "~> 1.9.0"},
       {:yaml_elixir, "~> 2.11.0"},
+      {:testcontainers, "~> 1.12", only: :test},
       {:credo, "~> 1.7", only: :dev, runtime: false},
       {:dialyxir, "~> 1.4", only: :dev, runtime: false},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
