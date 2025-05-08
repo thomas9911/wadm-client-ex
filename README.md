@@ -1,6 +1,8 @@
 # WadmClient
 
-**TODO: Add description**
+[![Coverage Status](https://coveralls.io/repos/github/thomas9911/wadm-client-ex/badge.svg?branch=main)](https://coveralls.io/github/thomas9911/wadm-client-ex?branch=main)
+
+Wadm client for Elixir, see the docs and the test for example uses.
 
 ## Installation
 
@@ -18,4 +20,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/wadm_client>.
-
