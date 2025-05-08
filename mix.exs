@@ -10,6 +10,7 @@ defmodule WadmClient.MixProject do
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
+        "coveralls.github": :test,
         "coveralls.json": :test,
         "coveralls.html": :test
       ],
